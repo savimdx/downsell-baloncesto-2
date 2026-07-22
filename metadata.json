@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Remix: Remix: Downsell +1000 Sesiones de Entrenamientos de Baloncesto",
+  "description": "Página de downsell optimizada y de alta conversión para entrenadores de baloncesto y preparación física.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
