@@ -40,6 +40,35 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
     return () => clearInterval(timer);
   }, []);
 
+  // Hotmart Sales Funnel Widget Initialization
+  useEffect(() => {
+    const scriptId = 'hotmart-checkout-script';
+    let script = document.getElementById(scriptId) as HTMLScriptElement;
+
+    const initHotmart = () => {
+      if ((window as any).checkoutElements) {
+        try {
+          (window as any).checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
+        } catch (err) {
+          console.error('Hotmart Sales Funnel init error:', err);
+        }
+      }
+    };
+
+    if (!script) {
+      script = document.createElement('script');
+      script.id = scriptId;
+      script.src = 'https://checkout.hotmart.com/lib/hotmart-checkout-elements.js';
+      script.async = true;
+      script.onload = () => {
+        initHotmart();
+      };
+      document.body.appendChild(script);
+    } else {
+      initHotmart();
+    }
+  }, []);
+
   const formatTimer = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
@@ -112,7 +141,7 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
             <div className="inline-block bg-gradient-to-r from-orange-500/20 via-amber-500/20 to-orange-500/20 border border-orange-500/40 rounded-2xl px-6 py-3.5 shadow-lg">
               <span className="text-xs font-mono font-bold text-slate-400 uppercase tracking-widest block mb-1">ACCESO AL MANUAL OFICIAL</span>
               <h2 className="text-lg sm:text-2xl lg:text-3xl font-black text-amber-400 uppercase tracking-wide">
-                PREPARACIÓN FÍSICA COMPLETA PARA EL BALONCESTO
+                PREPARACIÓN FÍSICA COMPLETA PARA EL BALONCESTO POR SOLO $ 4.90 USD
               </h2>
             </div>
           </div>
@@ -152,9 +181,6 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
                   className="w-full h-auto rounded-xl transition-transform duration-500 group-hover:scale-[1.02]"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute top-4 right-4 bg-gradient-to-r from-orange-500 to-amber-400 text-slate-950 text-[10px] font-black uppercase px-3 py-1 rounded-md shadow-md">
-                  ACCESO INMEDIATO
-                </div>
               </div>
               <span className="text-[11px] text-slate-400 font-mono text-center flex items-center gap-1.5">
                 📘 Manual Digital de Acceso Inmediato
@@ -277,30 +303,15 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
             </p>
           </div>
 
+          {/* HOTMART - Sales Funnel Widget */}
+          <div id="hotmart-sales-funnel" className="my-4 min-h-[50px]"></div>
+
           {/* Main CTA Button */}
           <div className="space-y-4 max-w-md mx-auto">
-            <button
-              onClick={onAccept}
-              className="w-full py-4 sm:py-5 px-6 rounded-2xl bg-gradient-to-r from-emerald-500 via-emerald-600 to-emerald-500 hover:brightness-110 text-white font-black text-base sm:text-lg uppercase tracking-wider transition-all duration-200 transform hover:scale-[1.02] shadow-[0_10px_30px_rgba(16,185,129,0.4)] flex items-center justify-center gap-3 cursor-pointer border border-emerald-400/40"
-            >
-              <Sparkles className="h-5 w-5 text-amber-300 animate-pulse" />
-              <span>🔥 QUIERO ACCEDER AHORA</span>
-            </button>
-
             {/* Below Button Indicators */}
             <p className="text-xs font-mono font-bold text-slate-300 uppercase tracking-wider">
               Acceso inmediato • Pago seguro • Contenido digital
             </p>
-
-            {/* Decline option */}
-            <div className="pt-3 border-t border-slate-800">
-              <button
-                onClick={onDecline}
-                className="text-xs text-slate-500 hover:text-slate-400 underline font-medium cursor-pointer transition-colors"
-              >
-                No gracias, prefiero dejar pasar esta oportunidad de $4.90 USD
-              </button>
-            </div>
           </div>
 
         </div>
