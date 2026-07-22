@@ -148,19 +148,7 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
 
         </div>
 
-        {/* ================= 3. SECCIÓN DE OPORTUNIDAD ESPECIAL ================= */}
-        <div className="bg-gradient-to-br from-slate-900 via-slate-900/90 to-orange-950/30 border border-amber-500/30 rounded-3xl p-6 sm:p-8 text-center max-w-3xl mx-auto shadow-2xl relative overflow-hidden backdrop-blur-md">
-          <div className="space-y-3 relative z-10">
-            <div className="inline-flex items-center gap-2 text-amber-400 font-mono text-xs font-bold uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
-              💡 NOTA ESPECIAL PARA TI
-            </div>
-            <p className="text-sm sm:text-base text-slate-200 leading-relaxed font-medium italic">
-              "Sabemos que quizás la oferta anterior no era lo que estabas buscando en este momento. Por eso, hemos preparado una opción más accesible para que puedas comenzar a mejorar tu preparación física y la de tu equipo."
-            </p>
-          </div>
-        </div>
-
-        {/* ================= 4. ¿QUÉ RECIBIRÁS? Y PRODUCTO MOCKUP ================= */}
+        {/* ================= 3. ¿QUÉ RECIBIRÁS? Y PRODUCTO MOCKUP ================= */}
         <div className="bg-slate-900/70 border border-slate-800 rounded-3xl p-6 sm:p-10 lg:p-12 shadow-2xl backdrop-blur-md relative overflow-hidden space-y-8">
           
           <div className="text-center space-y-2 max-w-3xl mx-auto">
@@ -211,6 +199,18 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
               ))}
             </div>
 
+          </div>
+        </div>
+
+        {/* ================= 4. SECCIÓN DE OPORTUNIDAD ESPECIAL ================= */}
+        <div className="bg-gradient-to-br from-slate-900 via-slate-900/90 to-orange-950/30 border border-amber-500/30 rounded-3xl p-6 sm:p-8 text-center max-w-3xl mx-auto shadow-2xl relative overflow-hidden backdrop-blur-md">
+          <div className="space-y-3 relative z-10">
+            <div className="inline-flex items-center gap-2 text-amber-400 font-mono text-xs font-bold uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
+              💡 NOTA ESPECIAL PARA TI
+            </div>
+            <p className="text-sm sm:text-base text-slate-200 leading-relaxed font-medium italic">
+              "Sabemos que quizás la oferta anterior no era lo que estabas buscando en este momento. Por eso, hemos preparado una opción más accesible para que puedas comenzar a mejorar tu preparación física y la de tu equipo."
+            </p>
           </div>
         </div>
 
