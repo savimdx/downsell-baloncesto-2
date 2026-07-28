@@ -61,6 +61,11 @@ export default function ProductSamples() {
                       src={sample.url} 
                       alt={sample.alt} 
                       className="w-full h-auto object-contain block"
+                      loading="lazy"
+                      decoding="async"
+                      fetchPriority="low"
+                      width={310}
+                      height={400}
                       referrerPolicy="no-referrer"
                     />
                     <div className="absolute top-2.5 right-2 text-[10px] sm:text-xs font-black bg-slate-950/80 text-white px-2 py-0.5 rounded-full flex items-center space-x-1 backdrop-blur-xs">

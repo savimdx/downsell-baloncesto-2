@@ -29,8 +29,13 @@ export default function Hero() {
             <div className="w-full max-w-2xl my-4 overflow-hidden rounded-xl border border-slate-100 shadow-md">
               <img 
                 src="https://i.ibb.co/fsyRm4K/Chat-GPT-Image-17-de-jun-de-2026-10-01-30.png" 
-                alt="Chat-GPT-Image-17-de-jun-de-2026-10-01-30" 
+                alt="1000 Sesiones de Entrenamiento de Baloncesto" 
                 className="w-full h-auto object-cover"
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
+                width={800}
+                height={450}
                 referrerPolicy="no-referrer"
               />
             </div>

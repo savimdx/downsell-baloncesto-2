@@ -45,6 +45,11 @@ export default function Bonuses() {
                     src={bonus.image || "https://i.ibb.co/spmfyDSH/Chat-GPT-Image-17-de-jun-de-2026-12-04-32.png"} 
                     alt={bonus.title} 
                     className="max-w-full h-auto max-h-[300px] sm:max-h-[350px] mx-auto block object-contain hover:scale-[1.03] transition-transform duration-300"
+                    loading="lazy"
+                    decoding="async"
+                    fetchPriority="low"
+                    width={300}
+                    height={300}
                     referrerPolicy="no-referrer"
                   />
                 </div>

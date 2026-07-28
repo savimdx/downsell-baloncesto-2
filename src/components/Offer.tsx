@@ -76,6 +76,11 @@ export default function Offer({ onPurchase }: { onPurchase?: () => void }) {
                     src="https://i.ibb.co/6c21ZfyC/Chat-GPT-Image-17-de-jun-de-2026-10-01-30.png" 
                     alt="Producto principal + 5 bonificaciones tácticas"
                     className="rounded-2xl max-w-full h-auto border border-slate-100 shadow-md max-h-[300px] object-contain"
+                    loading="lazy"
+                    decoding="async"
+                    fetchPriority="low"
+                    width={400}
+                    height={300}
                     referrerPolicy="no-referrer"
                   />
                 </div>

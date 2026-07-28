@@ -13,15 +13,22 @@
     <!-- Speed up connections to essential external resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://i.postimg.cc" />
+    <link rel="preconnect" href="https://i.ibb.co" />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://i.postimg.cc" />
+    <link rel="dns-prefetch" href="https://i.ibb.co" />
     <link rel="dns-prefetch" href="https://cdn.utmify.com.br" />
+    <link rel="dns-prefetch" href="https://checkout.hotmart.com" />
+    <link rel="dns-prefetch" href="https://pay.hotmart.com" />
 
     <!-- Highly optimized font request using display=swap for instantaneous FCP -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;950&family=JetBrains+Mono:wght@400;500;700&display=swap" />
 
-    <!-- Preload above-the-fold hero mockup image to load it before React mounts -->
-    <link rel="preload" href="https://i.postimg.cc/T2ZdqwyN/Chat-GPT-Image-5-de-jul-de-2026-18-59-47.png" as="image" />
+    <!-- Preload key above-the-fold images to load them before React mounts -->
+    <link rel="preload" href="https://i.postimg.cc/5yhDtSc7/Chat-GPT-Image-19-de-jul-de-2026-01-43-27.png" as="image" fetchpriority="high" />
+    <link rel="preload" href="https://i.ibb.co/fsyRm4K/Chat-GPT-Image-17-de-jun-de-2026-10-01-30.png" as="image" fetchpriority="high" />
 
     <script>
       // Safeguard against third-party scripts throwing "Converting circular structure to JSON"

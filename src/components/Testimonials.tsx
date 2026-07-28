@@ -63,6 +63,11 @@ export default function Testimonials() {
                           src={t.photoUrl} 
                           alt={t.name} 
                           className="h-full w-full object-cover"
+                          loading="lazy"
+                          decoding="async"
+                          fetchPriority="low"
+                          width={40}
+                          height={40}
                           referrerPolicy="no-referrer"
                         />
                       ) : (

@@ -93,12 +93,12 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
       <div className="absolute top-[40%] right-10 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[150px] pointer-events-none"></div>
 
       {/* ================= 1. BARRA SUPERIOR DE URGENCIA ================= */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-orange-600 via-amber-600 to-orange-700 text-white py-2.5 px-4 shadow-[0_4px_25px_rgba(249,115,22,0.3)] flex items-center justify-center gap-2 sm:gap-4 border-b border-white/10">
+      <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-white py-2.5 px-4 shadow-[0_4px_25px_rgba(220,38,38,0.4)] flex items-center justify-center gap-2 sm:gap-4 border-b border-red-500/30">
         <span className="text-base sm:text-lg animate-pulse">🔥</span>
         <span className="text-xs sm:text-sm font-extrabold tracking-wide uppercase font-sans">
           OFERTA ESPECIAL POR TIEMPO LIMITADO
         </span>
-        <div className="flex items-center gap-1.5 bg-black/30 border border-white/20 rounded-xl px-2.5 py-1 text-xs sm:text-sm font-black text-amber-300 font-mono shadow-inner">
+        <div className="flex items-center gap-1.5 bg-black/40 border border-white/20 rounded-xl px-2.5 py-1 text-xs sm:text-sm font-black text-amber-300 font-mono shadow-inner">
           <Clock className="h-3.5 w-3.5 text-amber-400 shrink-0" />
           <span>{formatTimer(secondsLeft)}</span>
         </div>
@@ -149,7 +149,7 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
         </div>
 
         {/* ================= 3. ¿QUÉ RECIBIRÁS? Y PRODUCTO MOCKUP ================= */}
-        <div className="bg-slate-900/70 border border-slate-800 rounded-3xl p-6 sm:p-10 lg:p-12 shadow-2xl backdrop-blur-md relative overflow-hidden space-y-8">
+        <div className="bg-slate-900/95 border border-slate-800 rounded-3xl p-6 sm:p-10 lg:p-12 shadow-2xl relative overflow-hidden space-y-8 transform-gpu">
           
           <div className="text-center space-y-2 max-w-3xl mx-auto">
             <span className="text-xs font-mono font-bold text-orange-400 uppercase tracking-widest">CONTENIDO EXCLUSIVO DIGITAL</span>
@@ -166,7 +166,12 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
                 <img 
                   src="https://i.postimg.cc/5yhDtSc7/Chat-GPT-Image-19-de-jul-de-2026-01-43-27.png" 
                   alt="Preparación Física Completa para el Baloncesto" 
-                  className="w-full h-auto rounded-xl transition-transform duration-500 group-hover:scale-[1.02]"
+                  className="w-full h-auto rounded-xl transition-transform duration-500 group-hover:scale-[1.02] transform-gpu"
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
+                  width={600}
+                  height={800}
                   referrerPolicy="no-referrer"
                 />
               </div>
@@ -203,7 +208,7 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
         </div>
 
         {/* ================= 4. SECCIÓN DE OPORTUNIDAD ESPECIAL ================= */}
-        <div className="bg-gradient-to-br from-slate-900 via-slate-900/90 to-orange-950/30 border border-amber-500/30 rounded-3xl p-6 sm:p-8 text-center max-w-3xl mx-auto shadow-2xl relative overflow-hidden backdrop-blur-md">
+        <div className="bg-gradient-to-br from-slate-900 via-slate-900 to-orange-950/40 border border-amber-500/30 rounded-3xl p-6 sm:p-8 text-center max-w-3xl mx-auto shadow-2xl relative overflow-hidden transform-gpu">
           <div className="space-y-3 relative z-10">
             <div className="inline-flex items-center gap-2 text-amber-400 font-mono text-xs font-bold uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
               💡 NOTA ESPECIAL PARA TI
@@ -224,8 +229,8 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             
             {/* Beneficio 1 */}
-            <div className="bg-slate-900/60 border border-slate-800 hover:border-orange-500/40 p-6 rounded-2xl space-y-3 transition-all group relative overflow-hidden">
-              <div className="h-12 w-12 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-400 group-hover:scale-110 transition-transform">
+            <div className="bg-slate-900/80 border border-slate-800 hover:border-orange-500/40 p-6 rounded-2xl space-y-3 transition-all group relative overflow-hidden transform-gpu">
+              <div className="h-12 w-12 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-400 group-hover:scale-110 transition-transform transform-gpu">
                 <Dumbbell className="h-6 w-6" />
               </div>
               <h3 className="font-extrabold text-white text-base uppercase tracking-tight">Fuerza explosiva</h3>
@@ -235,8 +240,8 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
             </div>
 
             {/* Beneficio 2 */}
-            <div className="bg-slate-900/60 border border-slate-800 hover:border-amber-500/40 p-6 rounded-2xl space-y-3 transition-all group relative overflow-hidden">
-              <div className="h-12 w-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 group-hover:scale-110 transition-transform">
+            <div className="bg-slate-900/80 border border-slate-800 hover:border-amber-500/40 p-6 rounded-2xl space-y-3 transition-all group relative overflow-hidden transform-gpu">
+              <div className="h-12 w-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 group-hover:scale-110 transition-transform transform-gpu">
                 <Zap className="h-6 w-6" />
               </div>
               <h3 className="font-extrabold text-white text-base uppercase tracking-tight">Velocidad y agilidad</h3>
@@ -246,8 +251,8 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
             </div>
 
             {/* Beneficio 3 */}
-            <div className="bg-slate-900/60 border border-slate-800 hover:border-orange-500/40 p-6 rounded-2xl space-y-3 transition-all group relative overflow-hidden">
-              <div className="h-12 w-12 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-400 group-hover:scale-110 transition-transform">
+            <div className="bg-slate-900/80 border border-slate-800 hover:border-orange-500/40 p-6 rounded-2xl space-y-3 transition-all group relative overflow-hidden transform-gpu">
+              <div className="h-12 w-12 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-400 group-hover:scale-110 transition-transform transform-gpu">
                 <Activity className="h-6 w-6" />
               </div>
               <h3 className="font-extrabold text-white text-base uppercase tracking-tight">Resistencia y condición</h3>
@@ -257,8 +262,8 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
             </div>
 
             {/* Beneficio 4 */}
-            <div className="bg-slate-900/60 border border-slate-800 hover:border-amber-500/40 p-6 rounded-2xl space-y-3 transition-all group relative overflow-hidden">
-              <div className="h-12 w-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 group-hover:scale-110 transition-transform">
+            <div className="bg-slate-900/80 border border-slate-800 hover:border-amber-500/40 p-6 rounded-2xl space-y-3 transition-all group relative overflow-hidden transform-gpu">
+              <div className="h-12 w-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 group-hover:scale-110 transition-transform transform-gpu">
                 <Trophy className="h-6 w-6" />
               </div>
               <h3 className="font-extrabold text-white text-base uppercase tracking-tight">Mejor rendimiento en la cancha</h3>

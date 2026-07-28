@@ -5,14 +5,16 @@
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
-/* Custom globally useful micro-reset */
+/* Smooth scroll & rendering */
 html {
   scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
 }
+
 body {
   font-family: var(--font-sans);
-  background-color: #ffffff; /* Fundo Branco */
-  color: #0f172a; /* Slate 900 */
+  background-color: #ffffff;
+  color: #0f172a;
 }
 
 .scrollbar-none::-webkit-scrollbar {
@@ -25,10 +27,10 @@ body {
 
 @keyframes marquee {
   0% {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
@@ -36,6 +38,8 @@ body {
   display: flex;
   width: max-content;
   animation: marquee 30s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .animate-marquee:hover {
