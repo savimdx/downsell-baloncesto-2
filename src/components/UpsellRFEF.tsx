@@ -141,7 +141,7 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
             <div className="inline-block bg-gradient-to-r from-orange-500/20 via-amber-500/20 to-orange-500/20 border border-orange-500/40 rounded-2xl px-6 py-3.5 shadow-lg">
               <span className="text-xs font-mono font-bold text-slate-400 uppercase tracking-widest block mb-1">ACCESO AL MANUAL OFICIAL</span>
               <h2 className="text-lg sm:text-2xl lg:text-3xl font-black text-amber-400 uppercase tracking-wide">
-                PREPARACIÓN FÍSICA COMPLETA PARA EL BALONCESTO POR SOLO 5,28 €
+                PREPARACIÓN FÍSICA COMPLETA PARA EL BALONCESTO POR SOLO US$4,90
               </h2>
             </div>
           </div>
@@ -290,19 +290,19 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
             </p>
           </div>
 
-          {/* Price Callout ($4.90 USD) */}
+          {/* Price Callout (US$4,90) */}
           <div className="py-6 border-y border-white/10 max-w-md mx-auto space-y-2 bg-slate-950/60 rounded-2xl p-4">
             <span className="text-xs text-slate-400 uppercase font-mono tracking-widest block">
               PRECIO ESPECIAL ÚNICO
             </span>
             <div className="flex items-baseline justify-center gap-2">
               <span className="text-5xl sm:text-7xl font-black text-amber-400 font-sans tracking-tight drop-shadow-md">
-                5,28
-              </span>
-              <span className="text-5xl sm:text-7xl font-black text-amber-400 font-sans">
-                €
+                US$4,90
               </span>
             </div>
+            <p className="text-xs font-semibold text-amber-300">
+              (Puedes pagar en tu moneda local)
+            </p>
             <p className="text-[11px] text-slate-400 font-medium">
               (Pago único • Sin cobros mensuales • Acceso digital de por vida)
             </p>
